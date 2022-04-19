@@ -18,11 +18,24 @@ class ShowsController < ApplicationController
   
   def show
     show_id = params[:id]
-    @show=Show.find_by(id: show_id)
+    @show = Show.find_by(id: show_id)
     render :show
   end
 
   def edit
+    show_id = params[:id]
+    @show = Show.find_by(id: show_id)
+
+    @show.title = params["title"] || @show.title
+    @show.plot = params["plot"] || @show.plot
+    @show.year = params["year"] || @show.year
+
+    if @show.save
+      render :show
+    else
+      render json: {errors: @show.errors.full_messages},
+      status: 422
+    end
     
   end
 
