@@ -1,0 +1,9 @@
+###Create Show
+POST http://localhost:3000/shows.json
+Content-Type: application/json
+
+{
+  "title" : "A show",
+  "plot" : "The things that happen",
+  "year" : "0001"
+}
