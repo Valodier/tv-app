@@ -1,0 +1,6 @@
+@shows.map do |show|
+  {
+    id: show.id,
+    url: show_url(show, format: :json)
+  }
+end
