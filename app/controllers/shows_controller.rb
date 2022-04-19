@@ -6,7 +6,14 @@ class ShowsController < ApplicationController
   end
   
   def create
-    
+    @show = Show.create!(
+      title: params["title"],
+      plot: params["plot"],
+      year: params["year"]
+      )
+  
+    render :show
+      
   end
   
   def show
