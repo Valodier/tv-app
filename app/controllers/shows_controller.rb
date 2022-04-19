@@ -17,7 +17,9 @@ class ShowsController < ApplicationController
   end
   
   def show
-    
+    show_id = params[:id]
+    @show=Show.find_by(id: show_id)
+    render :show
   end
 
   def edit
