@@ -17,5 +17,5 @@ Content-Type: application/json
 }
 
 ###Destroy Show
-DELETE http://localhost:3000/shows/7
+DELETE http://localhost:3000/shows/8
 Content-Type: application/json
