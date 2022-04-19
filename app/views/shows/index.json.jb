@@ -1,6 +1,9 @@
 @shows.map do |show|
   {
     id: show.id,
+    title: show.title,
+    plot: show.plot,
+    year: show.year,
     url: show_url(show, format: :json)
   }
 end
