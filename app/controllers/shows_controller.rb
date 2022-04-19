@@ -39,7 +39,7 @@ class ShowsController < ApplicationController
     
   end
 
-  def delete
+  def destroy
     show_id = params[:id]
     @show = Show.find_by(id: show_id)
     @show.destroy
