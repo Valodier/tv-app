@@ -22,7 +22,7 @@ class ShowsController < ApplicationController
     render :show
   end
 
-  def edit
+  def update
     show_id = params[:id]
     @show = Show.find_by(id: show_id)
 
