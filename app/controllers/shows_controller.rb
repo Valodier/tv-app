@@ -40,8 +40,11 @@ class ShowsController < ApplicationController
   end
 
   def delete
-    
-  end
+    show_id = params[:id]
+    @show = Show.find_by(id: show_id)
+    @show.destroy
 
+    render json: {message: "Great success!"}
+  end
 
 end
